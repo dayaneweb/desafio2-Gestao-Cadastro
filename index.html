@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Gestão de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+       <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <section class="my-5">
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold text-center my-5 text-white">Desafio#2 Gama Academy</h2>
+                <p class="text-center w-responsive mx-auto pb-5 text-white">Cadastro de clientes e produtos</p>
+            </div>
+             <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 mb-lg-0 mb-4 ">
+                <p class="text-white text-center">Cliente <i class="fa fa-user"></i></p>
+                <div class="card ">
+                    <div class="card-body ">
+                        <form action="#" method="POST" id="clientForm">
+                        <div class="input-group mb-3 ">
+                            <input type="text" class="form-control" name="name" id="nome" placeholder="Nome.... " required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-user "></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="text" class="form-control " onblur="validaCpf(this)" name="cpf" id="cpf" placeholder="CPF.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-user "></i></span>
+                            </div>
+                        </div>
+                         <div class="input-group mb-3 ">
+                            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-phone "></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-envelope "></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-address-book-o "></i></span>
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <button type="submit" class="btn btn-primary btn-sm  ">Cadastrar</button>
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-lg-0 mb-4 ">
+                <p class="text-white text-center">Produtos <i class="fa fa-product-hunt"></i></p>
+                <div class="card ">
+                    <div class="card-body ">
+                        <form action="#" method="POST" id="produtoForm">
+                            <div class="input-group mb-3 ">
+                            <input type="number" class="form-control" name="codigo" id="codigo" placeholder="Codigo do Produto.... " required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-user "></i></span>
+                            </div>
+                        </div>
+                            <div class="input-group mb-3 ">
+                            <input type="text" class="form-control" name="nomeProduto" id="nomeProduto" placeholder="Nome do produto.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-user "></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="number" class="form-control" name="qtd" id="qtd" placeholder="Quantidade de estoque.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-sort-amount-desc"></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="number" class="form-control" name="valor" id="valor" placeholder="Valor do produto.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-tag "></i></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="text" class="form-control" name="categoria" id="categoria" placeholder="Categoria.... "required>
+                            <div class="input-group-append ">
+                                <span class="input-group-text "><i class="fa fa-sort-amount-desc "></i></span>
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <button type="submit" class="btn btn-primary btn-sm " >Cadastrar</button>
+                        </fom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="text-center text-dark">Clientes Cadastrados</h3>
+            <br>
+            <table class="table table-hover">
+            <thead>
+                <tr class="text-white">
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Endereço</th>
+                </tr>
+            </thead>
+            <tbody id="clients">
+               
+            </tbody>
+        </table>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="text-center text-white">Produtos Cadastrados</h3>
+            <br>
+            <table class="table table-hover">
+            <thead>
+                <tr class="text-danger">
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor R$</th>
+                    <th scope="col">Categoria</th>
+                </tr>
+            </thead>
+            <tbody id="products">
+                   
+            </tbody>
+        </table>
+        </div>
+    </section>
+    <footer class="text-center mt-5 pt-5 pb-5 text-lg-start footer " style="margin: 30px;">
+        <div class="container ">
+            
+                <p class="text-center text-dark font-weight-bold">&copy; 2021 Todos os Direitos Reservados Francisca Dayane de Araújo Sousa</p>
+            
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+        </section>
+    </body>
+</html>
