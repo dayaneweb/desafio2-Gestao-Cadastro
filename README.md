@@ -19,8 +19,8 @@ Valeeendo \o/
 funcionalidades
   - cadastro de produtos
   - cadastro de cientes
-  -validação de cpf 
-  -listagem de produtos
-  -listagem de clientes
-  -dados salvos no localstorage por meio Object JSon
-  -limpar os campos apos o cadastro ter sido realziado com sucesso
+  - validação de cpf 
+  - listagem de produtos
+  - listagem de clientes
+  - dados salvos no localstorage por meio Object JSon
+  - limpar os campos apos o cadastro ter sido realziado com sucesso
