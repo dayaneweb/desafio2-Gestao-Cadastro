@@ -23,4 +23,4 @@ funcionalidades
   - listagem de produtos
   - listagem de clientes
   - dados salvos no localstorage por meio Object JSon
-  - limpar os campos apos o cadastro ter sido realziado com sucesso
+  - limpar os campos apos o cadastro ter sido realizado com sucesso
